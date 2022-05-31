@@ -1,0 +1,47 @@
+{% extends 'Teacher/teacherhome.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="col-xl-9">
+    {% for i in tr %}
+ <div class="card mb-9">
+    <div class="card-header">
+        <i class="fas fa-chart-area me-1"></i>
+        Feedback Reply
+    </div>
+    <div class="card-body">
+        <div>
+            <label style="color:red"> SI No: </label>
+            <label>{{forloop.counter}}</label>
+        </div>
+        <div>
+            <label style="color:red"> Name: </label>
+            <label>{{i.name}}</label>
+        </div>
+        <div>
+            <label style="color:red"> Subject: </label>
+            <label>{{i.subject}}</label>
+        </div>
+        <div>
+            <label style="color:red"> Description: </label>
+            <label>{{i.description}}</label>
+        </div>
+
+        <div>
+            <label style="color:red"> Date: </label>
+            <label>{{i.date}}</label>
+        </div>
+        <br>
+        <div>
+            <label style="color:red">Reply : </label>
+            <label>{{i.reply}}</label>
+        </div>
+        <br>
+
+    </tbody>
+</table>
+    </div>
+ </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'Teacher/teacherhome.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="col-xl-9">
+ <div class="card mb-9">
+    <div class="card-header">
+        <i class="fas fa-chart-area me-1"></i>
+        Attendance
+    </div>
+     <form method="post">
+         {% csrf_token %}
+    <div class="card-body">
+         <div>
+            <input type="radio" name="attendance" value="present">P</input>
+            <input type="radio" name="attendance" value="absent">A</input><br>
+            <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+     </form>
+ </div>
+</div>
+{% endblock %}
+

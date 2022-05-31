@@ -1,0 +1,39 @@
+{% extends 'STUDENT/studenthome.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="col-xl-9">
+ <div class="card mb-9">
+    <div class="card-header">
+        <i class="fas fa-chart-area me-1"></i>
+        Student Profile
+    </div>
+    <div class="card-body">
+  {% for i in profile %}
+        <div>
+            <label style="color:red">Name : </label>
+            <label>{{i.name}}</label>
+        </div>
+        <br>
+        <div>
+            <label style="color:red">Class : </label>
+            <label>{{i.Class}}</label>
+        </div>
+        <br>
+        <div>
+            <label style="color:red">Email : </label>
+            <label>{{i.email}}</label>
+        </div>
+        <br>
+        <div>
+            <label style="color:red">Contact Number : </label>
+            <label>{{i.contact_no}}</label>
+        </div>
+
+       {% endfor %}
+    </tbody>
+</table>
+    </div>
+ </div>
+</div>
+
+{% endblock %}
